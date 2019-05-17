@@ -93,7 +93,7 @@ def main():
 
     if e["QUTE_MODE"] == "hints":
         r = get(url, headers={"User-Agent": e["QUTE_USER_AGENT"]})
-        html = r.content
+        html = r.text
         pdf = r.headers['Content-Type'].endswith('pdf')
 
     else:  # I guess this must be command mode
